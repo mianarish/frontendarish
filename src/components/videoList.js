@@ -102,7 +102,7 @@ const FeedPage = () => {
 
     try {
       const videoId = videos[currentIndex]?._id;
-      const response = await axios.post(
+      await axios.post(
         `${apiUrl}/videos/comment/${videoId}`,
         { text: commentText },
         { headers: { Authorization: `Bearer ${token}` } } // Pass the token for backend validation

@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, Button, TextField, Typography, Card, CardContent, CircularProgress, IconButton } from '@mui/material';
-import api from "../services/api";
+import { Box, Button, TextField, Typography, Card, CardContent, CircularProgress} from '@mui/material';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import axios from 'axios'
 const UploadPage = () => {
@@ -36,7 +35,7 @@ const UploadPage = () => {
 
     try {
     
-      const response = await axios.post(`${apiUrl}/videos/upload`, formData, {
+      await axios.post(`${apiUrl}/videos/upload`, formData, {
         headers: {
           Authorization: `Bearer ${userId}`,
           "Content-Type": "multipart/form-data",

@@ -7,7 +7,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import api from "../services/api";
+
 import { TextField, Button, Typography, Box, Container } from "@mui/material";
 import axios from 'axios'
 const LoginVariant2 = () => {
